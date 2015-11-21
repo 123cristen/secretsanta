@@ -1,7 +1,5 @@
 == WILDHACKS 2015: Secret Santa Generator
 By Julia, Cristen, Alex, and Morgan
 
-mwahhahahahahah merge conflict hahahaha
-hello github desktop pls work
-take2
+
 <tt>rake doc:app</tt>.
