@@ -3,7 +3,8 @@ Rails.application.routes.draw do
 
   get 'about' => 'static_pages#about'
 
-  get 'group/show'
+  get 'create_group' => 'group#new'
+  get 'show_group' => 'group#show'
 
   get 'group/create'
 
