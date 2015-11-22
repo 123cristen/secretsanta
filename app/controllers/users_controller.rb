@@ -15,9 +15,9 @@ class UsersController < ApplicationController
 	end
 
 	def destroy
-    @user.destroy
+    #@user.destroy
     flash[:success] = "Member deleted"
-    redirect_to group_url(@user.group_id)
+    redirect_to request.referrer
 	end
 
   def new
