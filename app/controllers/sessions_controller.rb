@@ -3,7 +3,7 @@ class SessionsController < ApplicationController
   end
 
   def create
-    group = Group.find_by(name: params[:session][:name].downcase)
+    group = Group.find_by(name: params[:session][:name])
     if group && group.authenticate(params[:session][:password])
       log_in group
       redirect_to group

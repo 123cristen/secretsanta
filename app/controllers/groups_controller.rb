@@ -14,7 +14,7 @@ class GroupsController < ApplicationController
   def create
   	@group = Group.new(group_params)
     if @group.save
-      #log_in @group
+      log_in @group
       flash[:success] = "Welcome to Secret Santa!"
       redirect_to @group
     else
