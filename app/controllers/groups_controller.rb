@@ -59,7 +59,7 @@ class GroupsController < ApplicationController
     end
 
         # Confirms the correct group.
-    def correct_user
+    def correct_group
       @group = Group.find(params[:id])
       redirect_to(root_url) unless @group == current_group
     end
