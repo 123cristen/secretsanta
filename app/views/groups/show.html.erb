@@ -1,3 +1,11 @@
 <%= render 'layouts/header'%>
 <h1><%= @group.name %></h1>
-<p></p>
+<span id="button"><%= link_to "Add Member", new_user_path %></span>
+  <div class="col-md-8">
+    <% if @group.users.any? %>
+      <h3>Group members (<%= @group.users.count %>)</h3>
+      <ol class="users">
+        <%= render @users %>
+      </ol>
+    <% end %>
+  </div>

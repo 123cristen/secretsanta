@@ -4,6 +4,7 @@ class GroupsController < ApplicationController
 
   def show
   	@group = Group.find(params[:id])
+    @users = @group.users
   end
 
   def new
@@ -48,14 +49,6 @@ class GroupsController < ApplicationController
     def group_params
       params.require(:group).permit(:name, :password,
                                    :password_confirmation)
-    end
-
-        # Confirms a logged-in group.
-    def logged_in_group
-      unless logged_in?
-        flash[:danger] = "Please log in."
-        redirect_to login_url
-      end
     end
 
         # Confirms the correct group.

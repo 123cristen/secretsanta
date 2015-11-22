@@ -1,4 +1,8 @@
 Rails.application.routes.draw do
+  get 'users/new'
+
+  get 'users/edit'
+
   get 'sessions/new'
 
   root 'static_pages#home'
@@ -7,6 +11,7 @@ Rails.application.routes.draw do
 
   get 'create_group' => 'groups#new'
   resources :groups
+  resources :users,     only: [:new, :create, :edit, :update]
   get    'login'   => 'sessions#new'
   post   'login'   => 'sessions#create'
   delete 'logout'  => 'sessions#destroy'
