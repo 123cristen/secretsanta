@@ -1,0 +1,6 @@
+<li id="User-<%= user.id %>">
+  <span class="user"><%= user.name %></span>
+  <span class="email"><%= user.email %></span>
+  <span> <%= link_to "delete", user, method: :delete,
+                                       data: { confirm: "Remove group member?" } %> </span>
+</li>

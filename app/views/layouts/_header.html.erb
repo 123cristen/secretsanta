@@ -1,8 +1,15 @@
 <%= link_to "Secret Santa", root_path, id: "logo" %>
 <nav>
   <ul class="nav nav-bar nav-right">
-    <li><%= link_to "Create Group",   create_group_path %></li>
-    <li><%= link_to "Log in to Existing Group",  '#'  %></li>
-    <li><%= link_to "About Secret Santa", about_path %></li>
+
+    <% if logged_in? %>
+        <li><%= link_to "My Group", current_group %></li>
+        <li><%= link_to "Group Settings", edit_group_path(current_group)%></li>
+        <li><%= link_to "Log out", logout_path, method: "delete" %></li>
+      <% else %>
+        <li><%= link_to "Create Group",   create_group_path %></li>
+		    <li><%= link_to "I Have a Group",  login_path  %></li>
+		    <li><%= link_to "About Secret Santa", about_path %></li>
+      <% end %>
   </ul>
 </nav>
