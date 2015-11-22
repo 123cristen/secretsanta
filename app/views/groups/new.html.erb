@@ -1,8 +1,10 @@
 <%= render 'layouts/header'%>
 <h1>Create Group</h1>
 
+<div 
 <div class="row">
   <div class="col-md-6 col-md-offset-3">
+    <div class="boxed">
     <%= form_for(@group) do |f| %>
       <%= render 'shared/error_messages' %>
 
@@ -17,5 +19,6 @@
 
       <%= f.submit "Create my group!", class: "btn btn-primary" %>
     <% end %>
+  </div>
   </div>
 </div>
