@@ -11,7 +11,7 @@ Rails.application.routes.draw do
 
   get 'create_group' => 'groups#new'
   resources :groups
-  resources :users,     only: [:new, :create, :edit, :update]
+  resources :users,     only: [:new, :create, :edit, :update,  :destroy]
   get    'login'   => 'sessions#new'
   post   'login'   => 'sessions#create'
   delete 'logout'  => 'sessions#destroy'

@@ -15,7 +15,7 @@ class UsersController < ApplicationController
 	end
 
 	def destroy
-    #@user.destroy
+    User.find(params[:id]).destroy
     flash[:success] = "Member deleted"
     redirect_to request.referrer
 	end
