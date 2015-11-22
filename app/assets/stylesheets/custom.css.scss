@@ -15,7 +15,6 @@ h1 {
 ul > li{
     list-style-type: none;
     margin: 0;
-    padding: 0;
     overflow: hidden;
     width: 20%;
     float: right;
@@ -24,6 +23,7 @@ ul > li{
     font-weight: bold;
     color: white ;
     background-color: #98bf21;
+
 }
 
 li {
@@ -53,10 +53,11 @@ body {
 
 }
 
-.boxed {
-  border: 1px solid green ;
-  background-color: rgba(25, 200, 0, 0.8);
-  padding: 10px;
+
+
+p {
+  color: white;
+  font-weight: bold;
 }
 
 /* forms */
@@ -125,4 +126,30 @@ aside {
   background-color: white;
     margin: 20px 5px 0;
     display: inline-block;
+}
+
+span.remove_user a {
+    display: inline-block;
+    font-weight: normal;
+    color: blue;
+    background: none;
+    border: none ;
+    text-align: center;
+    padding: 8px;
+    text-decoration: none;
+    text-transform: none;
+    font-size: 100%;
+}
+
+.boxed {
+  border: 1px solid black ;
+  background-color: rgba(250, 0, 50, 0.8);
+  padding: 10px;
+  text-align: center;
+}
+
+.userfield {
+  margin-top: 10px;
+  margin-right: 400px;
+  font-size: 130%;
 }

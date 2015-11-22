@@ -3,6 +3,7 @@
 
 <div class="row">
   <div class="col-md-6 col-md-offset-3">
+  	<div class="boxed">
     <%= form_for(:session, url: login_path) do |f| %>
 
       <%= f.label :group, "Group name" %>
@@ -13,5 +14,6 @@
 
       <%= f.submit "Log in", class: "btn btn-primary" %>
     <% end %>
+</div>
   </div>
 </div>

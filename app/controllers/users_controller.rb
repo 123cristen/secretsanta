@@ -7,7 +7,7 @@ class UsersController < ApplicationController
       flash[:success] = "Group member added!"
       redirect_to group_url(@user.group_id)
     else
-      render group_url(@user.group_id)
+      render 'new'
     end
 	end
 
