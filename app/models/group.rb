@@ -1,5 +1,5 @@
 class Group < ActiveRecord::Base
-	has_many :users
+	has_many :users, dependent: :destroy
 	validates :name, presence: true, length: {maximum: 100},
 		uniqueness: {case_sensitive: false}
 	has_secure_password
